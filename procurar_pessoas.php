@@ -36,6 +36,9 @@
                                         
 										$('.btn_seguir').click(function() {
 											var id_usuario =  $(this).data('id_usuario');
+
+											$('#btn_seguir_'+id_usuario).hide();
+											$('#btn_deixar_seguir_'+id_usuario).show();
 											
 											$.ajax({
 												url: 'seguir.php',
@@ -49,6 +52,9 @@
 
 										$('.btn_deixar_seguir').click(function() {
 											var id_usuario =  $(this).data('id_usuario');
+
+											$('#btn_deixar_seguir_'+id_usuario).hide();
+											$('#btn_seguir_'+id_usuario).show();
 											
 											$.ajax({
 												url: 'deixar_seguir.php',
